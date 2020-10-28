@@ -1,0 +1,97 @@
+<%- include('../../includes/header')-%>
+        <div class="wrapper">
+          <%- include('../../includes/topbar')-%>
+            <div class="page-wrap">
+              <%- include('../../includes/sidebar')-%>
+              <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row clearfix">
+                    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"><h2>প্রদর্শনীর অগ্রগতির প্রতিবেদন ফর্ম</h2></div>
+                                <p><%
+                                if(success !=''){ %>
+                                <%= success %>
+                                    <% } %>
+                                </p>
+                                </div>  
+                            <div class="panel-body" >
+                                <form action="/upazilla/trialProgressFormPost" id="FieldTrialForm" class="form-horizontal" method="post"  role="form">
+                                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                                        <p>Error:</p>
+                                        <span></span>
+                                    </div>
+
+                                        
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label">প্রদর্শনীর/কারযক্রমের নাম</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="name" placeholder="প্রদর্শনীর/কারযক্রমের নাম">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="boraddo" class="col-md-3 control-label">বরাদ্দ</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="boraddo" placeholder="বরাদ্দ">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="done" class="col-md-3 control-label">স্থাপিত/সম্পন্ন</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="done" placeholder="স্থাপিত/সম্পন্ন">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="breed" class="col-md-3 control-label">প্রদর্শনীর ফসলের জাতের নাম(প্রদরশনীর সংখ্যা ভিত্তিক)</label>
+                                        <div class="col-md-9">
+                                        <input type="text" class="form-control" name="breed" placeholder="প্রদর্শনীর ফসলের জাতের নাম(প্রদরশনীর সংখ্যা ভিত্তিক)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="source" class="col-md-3 control-label">বীজ/চারার উতস(গবেষণা প্রতিষ্ঠানের নাম/বিএডিসি/কোম্পানীর নাম)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="source" placeholder="বীজ/চারার উতস(গবেষণা প্রতিষ্ঠানের নাম/বিএডিসি/কোম্পানীর নাম)">
+                                        </div>
+                                    </div>
+
+                                    
+
+                                   
+
+                                    <div class="form-group">
+                                        <label for="year" class="col-md-3 control-label">বছর</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="year" placeholder="year">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="year" class="col-md-3 control-label">userid</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="user_id" placeholder="id" value="<%= user_id %>">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <!-- Button -->                                        
+                                        <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">   
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                        
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('../../includes/footer')-%>

@@ -1,0 +1,48 @@
+<%if (records.length >0){ %>
+    <table class="table table-bordered table-striped" id="tblCustomers" cellspacing="0" cellpadding="0">
+    <thead>
+    <tr>
+        <th>প্রদর্শনীর/কারযক্রমের নাম</th>
+        <th>বরাদ্দ</th>
+        <th>স্থাপিত/সম্পন্ন</th>
+        <th>প্রদর্শনীর ফসলের জাতের নাম(প্রদরশনীর সংখ্যা ভিত্তিক)</th>
+        <th>বীজ/চারার উতস(গবেষণা প্রতিষ্ঠানের নাম/বিএডিসি/কোম্পানীর নাম)</th>
+        <th>পরিবর্তন/মুছুন</th>
+    </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(row){ %>
+            <tr>
+                <td><%= row.name %></td>
+                <td><%= row.boraddo %></td>
+                <td><%= row.done %></td>
+                <td><%= row.breed %></td>
+                <td><%= row.source %></td>
+                <td><a class="btn btn-primary btn-xs" href="/upazilla/trialProgressEdit/<%= row.id %>"><i class="fa fa-edit"></i></a>
+                    <a class="btn btn-danger btn-xs" href="/upazilla/trialProgressDelete/<%= row.id %>"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<% }else{ %>
+    <table class="table table-bordered table-striped" id="tblCustomers" cellspacing="0" cellpadding="0">
+        <thead>
+        <tr>
+            <th>প্রদর্শনীর/কারযক্রমের নাম</th>
+            <th>বরাদ্দ</th>
+            <th>স্থাপিত/সম্পন্ন</th>
+            <th>প্রদর্শনীর ফসলের জাতের নাম(প্রদরশনীর সংখ্যা ভিত্তিক)</th>
+            <th>বীজ/চারার উতস(গবেষণা প্রতিষ্ঠানের নাম/বিএডিসি/কোম্পানীর নাম)</th>
+            <th>পরিবর্তন/মুছুন</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% records.forEach(function(row){ %>
+            <tr>
+                <td colspan="10">No data Found</td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+<% } %>

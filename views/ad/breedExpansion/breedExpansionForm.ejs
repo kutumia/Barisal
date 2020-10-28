@@ -1,0 +1,157 @@
+<%- include('../../includes/header')-%>
+        <div class="wrapper">
+          <%- include('../../includes/topbar')-%>
+            <div class="page-wrap">
+              <%- include('../../includes/sidebar')-%>
+              <div class="main-content">
+                <div class="container-fluid">
+                    <div class="row clearfix">
+                    <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <div class="panel-title"><h2>প্রকল্প এলাকার ফসলের জাত সম্প্রসারণ ফর্ম</h2></div>
+                                <p><%
+                                if(success !=''){ %>
+                                <%= success %>
+                                    <% } %>
+                                </p>
+                                </div>  
+                            <div class="panel-body" >
+                                <form action="/upazilla/breedExpansionFormPost" id="FieldTrialForm" class="form-horizontal" method="post"  role="form">
+                                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                                        <p>Error:</p>
+                                        <span></span>
+                                    </div>
+
+                                        
+                                    <div class="form-group">
+                                        <label for="name" class="col-md-3 control-label">ফসলের নাম</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="name" placeholder="ফসলের নাম">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="bname" class="col-md-3 control-label">জাতের নাম</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="bname" placeholder="জাতের নাম">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="areaShotero" class="col-md-3 control-label">আবাদী জমি (২০১৭-১৮)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="areaShotero" placeholder="আবাদী জমি (২০১৭-১৮)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productionShotero" class="col-md-3 control-label">উৎপাদন (২০১৭-১৮)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="productionShotero" placeholder="উৎপাদন (২০১৭-১৮)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="areaAtharo" class="col-md-3 control-label">আবাদী জমি (২০১৮-১৯)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="areaAtharo" placeholder="আবাদী জমি (২০১৮-১৯)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productionAtharo" class="col-md-3 control-label">উৎপাদন (২০১৮-১৯)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="productionAtharo" placeholder="উৎপাদন (২০১৮-১৯)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="areaUnish" class="col-md-3 control-label">আবাদী জমি (২০১৯-২০)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="areaUnish" placeholder="আবাদী জমি (২০১৯-২০)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productionUnish" class="col-md-3 control-label">উৎপাদন (২০১৯-২০)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="productionUnish" placeholder="উৎপাদন (২০১৯-২০)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="areaBish" class="col-md-3 control-label">আবাদী জমি (২০২০-২১)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="areaBish" placeholder="আবাদী জমি (২০২০-২১)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productionBish" class="col-md-3 control-label">উৎপাদন (২০২০-২১)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="productionBish" placeholder="উৎপাদন (২০২০-২১)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="areaEkush" class="col-md-3 control-label">আবাদী জমি (২০২১-২২)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="areaEkush" placeholder="আবাদী জমি (২০২১-২২)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productionEkush" class="col-md-3 control-label">উৎপাদন (২০২১-২২)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="productionEkush" placeholder="উৎপাদন (২০২১-২২)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="areaBaish" class="col-md-3 control-label">আবাদী জমি (২০২২-২৩)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="areaBaish" placeholder="আবাদী জমি (২০২২-২৩)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="productionBaish" class="col-md-3 control-label">উৎপাদন (২০২২-২৩)</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="productionBaish" placeholder="উৎপাদন (২০২২-২৩)">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="year" class="col-md-3 control-label">বছর</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" name="year" placeholder="বছর">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="year" class="col-md-3 control-label">userid</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="user_id" placeholder="id" value="<%= user_id %>">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="form-group">
+                                        <!-- Button -->                                        
+                                        <div class="col-md-offset-3 col-md-9">
+                                        <input type="submit" name="submit" value="submit" class="btn btn-primary">   
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                        
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<%- include('../../includes/footer')-%>
